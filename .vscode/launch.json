@@ -5,31 +5,15 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Java",
-            "type": "java",
-            "request": "launch",
-            "stopOnEntry": true,
             "jdkPath": "${env:JAVA_HOME}/bin",
             "cwd": "${fileDirname}",
-            "startupClass": "${fileBasenameNoExtension}",
-            "classpath": [
-                ".",
-                "${fileDirname}"
-            ],
-            "console": "externalTerminal"
-        },
-        {
-            "name": "Java Console App",
+            "startupClass": "${fileBasename}",
             "type": "java",
+            "name": "Launch Car",
             "request": "launch",
-            "stopOnEntry": true,
-            "jdkPath": "${env:JAVA_HOME}/bin",
-            "cwd": "${fileDirname}",
-            "startupClass": "${fileBasenameNoExtension}",
-            "classpath": [
-                ".",
-                "${fileDirname}"
-            ],
+            "mainClass": "Car",
+            "projectName": "Java_80fc9c45",
+            "externalConsole": true,
             "console": "externalTerminal"
         },
         {
@@ -40,17 +24,7 @@
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}",
-            "console": "externalTerminal"
-        },
-        {
-            "jdkPath": "${env:JAVA_HOME}/bin",
-            "cwd": "${fileDirname}",
-            "startupClass": "${fileBasename}",
-            "type": "java",
-            "name": "Launch Car",
-            "request": "launch",
-            "mainClass": "Car",
-            "projectName": "archive_3137ffdf",
+            "externalConsole": true,
             "console": "externalTerminal"
         }
     ]
