@@ -12,6 +12,18 @@
             "name": "Launch Car",
             "request": "launch",
             "mainClass": "Car",
+            "projectName": "archive_3137ffdf",
+            "externalConsole": true,
+            "console": "externalTerminal"
+        },
+        {
+            "jdkPath": "${env:JAVA_HOME}/bin",
+            "cwd": "${fileDirname}",
+            "startupClass": "${fileBasename}",
+            "type": "java",
+            "name": "Launch Car",
+            "request": "launch",
+            "mainClass": "Car",
             "projectName": "Java_80fc9c45",
             "externalConsole": true,
             "console": "externalTerminal"
