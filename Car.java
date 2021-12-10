@@ -6,38 +6,22 @@ public class Car {
 	private String model; 
 	private String colour;
 
-	public void setBrand (String b) {
-		brand = b;
-	}
-
+	public void setBrand (String b) { brand = b;}
 	public String getBrand () { return brand; }
 
-	public void setModel (String m) {
-		model = m;
-	}
-
+	public void setModel (String m) { model = m; }
 	public String getModel () { return model; }
 
-	public void setColour (String c) {
-		colour = c;
-	}
-
+	public void setColour (String c) { colour = c; }
 	public String getColour () { return colour; }
 
 	//behaviours 
-	public static void speed(double s, String unit) {
-		System.out.println("\n\n");
-		switch (unit) {
-			case "m/s": System.out.printf("Speed: %.3f KM/h\n", s*3.6); break;
-			case "ft/s":System.out.printf("Speed: %.3f KM/h\n", s*1.097); break;
-			case "mi/s": System.out.printf("Speed: %.3f KM/h\n", s*5793.6384); break;
-			case "km/h": System.out.printf("Speed: %.3f KM/h\n", s); break;
-			default: System.out.println("invalid unit, \n\nspeed: 0.0 KM/h"); 
-		}
+	public static double speed(double d, double t) {
+		return (d/t) * 5793.6384;
 	}
 
 	public void infor() {
-		System.out.printf("Model: %s \nBrand: %s \nColor: %s \n\n", model, brand, colour);
+		System.out.printf("Model: %s \nBrand: %s \nColor: %s \n\n", getModel(), brand, colour);
 	}
 
 	public static void main(String [] args) {
@@ -48,8 +32,9 @@ public class Car {
 		obj1.setBrand("Ford");
 		obj1.setColour("gray");
 
-		System.out.printf("%20sThis is Your car information \n\nEnter speed and unit \nunits: (m/s) (ft/s) (mi/s) (km/h)\n", " ");
-		speed(in.nextDouble(), in.next()); in.close();
+		System.out.printf("\n\nEnter distance in miles and time in seconds: ");
+
+		System.out.printf("\n\n%20sThis is Your car information \n\nspeed: %.3f KM/h\n", " ", speed(in.nextDouble(), in.nextDouble()));	
 		obj1.infor();
 	}
 }
